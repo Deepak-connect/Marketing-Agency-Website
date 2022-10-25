@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* background colors */
+    --bg-black:#090b3c;
+    --bg-white: #fff;
+    --bg-light-2: #f2f7fa;
+    --bg-dark-green: #0e9d80;
+    --bg-features-1: #fff6d6;
+    --bg-features-2: #ebdcf9;
+    --bg-features-3: #ddf5fc;
+    --bg-features-4: #dcf6e8;
+    --bg-features-5: #f8e4e1;
+    --bg-features-6: #fbffd4;
+
+    /* Text colors */
+    --text-black: #000;
+    --text-white: #fff;
+    --text-dark-gray: #4c535d;
+    --text-dark-green: #12c4a0;
+    --text-orange: #ff5d2a;
+    --text-yellow: #ffc100;
+
+    /* Fonts */
+    --primary-font: Quicksand;
+    --secondary-font: 'Poppins', sans-serif;
+    --normal-font-weight: 400;
+    --bold-font-weight: 700;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-weight: var(--normal-font-weight);
+    background-color: var(--bg-white);
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--text-yellow);
+}
+
+/* body CSS */
+
+.dark-btn{
+    background-color: var(--bg-black);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-white) !important;
+    padding: 12px 29px !important;
+    border: 2px solid var(--bg-black);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0 /10%);
+}
+.dark-btn:hover{
+    background-color: var(--text-yellow);
+    border-color: var(--text-yellow);
+    color: var(--text-black)!important;
+}
+.dark-btn:hover i{
+    color: var(--text-black);
+    margin-right: 10px;
+}
+
+/* navbar css */
+.navbar{
+    background-color: var(--bg-white);
+}
+.navbar-brand img{
+    max-width: 210px;
+}
+.menu-navbar-nav{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+header .nav-item{
+    margin: 0 10px;
+}
+header .nav-item .nav-link{
+    color: var(--text-black);
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+}
+header .nav-item .nav-link .active{
+    color: var(--text-dark-green);
+}
+header .nav-item .nav-link:hover{
+    color: var(--text-dark-green);
+}
+header .dark-btn i{
+    color: var(--text-yellow);
+    margin-right: 10px;
+}
+
+
+/* Home Section */
+.home{
+    width: 100%;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    padding: 100px 0 125px;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.banner-subtitle{
+    font-size: 20px;
+    font-weight: var(--bold-font-weight);
+    color: var(--text-dark-gray);
+}
+.banner-title{
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+span{
+    color: var(--bg-dark-green);
+}
+.banner-para{
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    color: var(--text-dark-gray);
+}
+.home .banner-img img{
+    width: 100%;
+    animation: float 5s ease-in-out infinite;
+}
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(20px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* clients section */
+.clients{
+    padding: 80px 80px;
+    background-color: var(--bg-light-2);
+}
+.clients .swiper-slide img{
+    max-width: 160px;
+}
+.client-title{
+    font-size: 28px;
+    font-weight: var(--bold-font-weight);
+    color: var(--text-dark-gray);
+}
+
+/* About section */
+.about{
+    padding: 100px 0 0;
+}
+.about .number{
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    background-color: var(--bg-dark-green);
+    font-weight: 800;
+    padding: 4px 17px;
+    max-width: 44px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: var(--bg-white);
+}
+.about .about-title{
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+.about .para{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark-gray);
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+.about .about-2{
+    background-color: var(--bg-light-2);
+    padding: 80px 0;
+}
+.about img{
+    max-width: 600px;
+}
+.about-1{
+    margin-bottom: 80px;
+}
+.about-1 img{
+    float: right;
+}
+
+/* Accomplishment */
+.projects{
+    padding: 50px 0;
+}
+.projects h3{
+    color: var(--text-orange);
+    font-size: 42px;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.projects .accom-title{
+    font-size: 16px;
+    color: var(--text-dark-gray);
+    font-weight: 700;
+}
+
+/* Services */
+.services{
+    padding: 100px 0;
+    background-color: var(--bg-light-2);
+}
+.section-subtitle{
+    font-size: 20px;
+    font-weight: var(--bold-font-weight);
+    color: var(--text-dark-gray);
+}
+.section-title{
+    font-family: var(--secondary-font);
+    font-size: 36px;
+    font-weight: 800;
+}
+.services h3{
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    color: var(--text-black);
+    font-weight: var(--bold-font-weight);
+    margin-top: 20px;
+}
+.services .service-text{
+    font-size: 16px;
+    color: var(--text-dark-gray);
+    font-weight: 600;
+}
+.services .service{
+    margin-bottom: 50px;
+}
+.service-1{
+    padding: 40px;
+    background-color: var(--bg-features-1);
+    border-radius: 15px;
+}
+.service-1:before{
+    content: url(../images/consultancy.png);
+    position: absolute;
+    margin-top:-60px;
+}
+.service-2{
+    padding: 40px;
+    background-color: var(--bg-features-2);
+    border-radius: 15px;
+}
+.service-2:before{
+    content: url(../images/solutions.png);
+    position: absolute;
+    margin-top:-60px;
+}
+.service-3{
+    padding: 40px;
+    background-color: var(--bg-features-3);
+    border-radius: 15px;
+}
+.service-3:before{
+    content: url(../images/simple.png);
+    position: absolute;
+    margin-top:-60px;
+}
+.service-4{
+    padding: 40px;
+    background-color: var(--bg-features-4);
+    border-radius: 15px;
+}
+.service-4:before{
+    content: url(../images/deadline.png);
+    position: absolute;
+    margin-top:-60px;
+}
+.service-5{
+    padding: 40px;
+    background-color: var(--bg-features-5);
+    border-radius: 15px;
+}
+.service-5:before{
+    content: url(../images/data.png);
+    position: absolute;
+    margin-top:-60px;
+}
+.service-6{
+    padding: 40px;
+    background-color: var(--bg-features-6);
+    border-radius: 15px;
+}
+.service-6:before{
+    content: url(../images/flexible.png);
+    position: absolute;
+    margin-top:-60px;
+}
+
+/* Testimonial */
+.testimonial{
+    padding: 100px 0;
+}
+
+.review{
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgb(0 0 0 /10%);
+}
+.testimonial .name{
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+.testimonial .designation{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark-gray);
+}
+.testimonial .review-text{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+.swiper-button-next, .swiper-button-prev{
+    color: var(--text-yellow);
+    height: 12px !important;
+}
+.swiper-pagination-bullet{
+    background: var(--text-yellow);
+}
+
+/* cta */
+.contact{
+    padding: 50px;
+    background-color: var(--bg-light-2);
+}
+.contact h2{
+    font-family: var(--secondary-font);
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+.contact i{
+    color: var(--text-yellow);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Footer */
+footer{
+    background: url(../images/bg_footer.png);
+    background-size: cover;
+    background-color: var(--bg-black);
+    color: var(--text-white);
+}
+.footer-top{
+    padding: 100px 0 20px 0;
+    border-bottom: 1px solid white;
+}
+.footer-logo{
+    max-width: 180px;
+}
+footer .footer-info,
+footer a{
+    margin-top: 20px;
+    color: var(--text-white);
+    line-height: 2.4;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-info a{
+    margin-right: 30px;
+}
+.about-company{
+    font-size: 16px;
+    font-weight: 600;
+}
+footer h3{
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+footer .credit{
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+footer span a{
+    color: var(--text-yellow);
+}
